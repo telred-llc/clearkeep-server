@@ -16,8 +16,8 @@ router.get('/:messageId', async (req, res) => {
 
 router.post('/', async (req, res) => {
   const message = await req.context.models.Message.create({
-    text: req.body.text,
-    user: req.context.me.id,
+    token: req.body.token,
+    passphrase: req.body.passphrase,
   });
 
   return res.send(message);

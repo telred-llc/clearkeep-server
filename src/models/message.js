@@ -1,11 +1,14 @@
 import mongoose from 'mongoose';
 
 const messageSchema = new mongoose.Schema({
-  text: {
+  token: {
     type: String,
     required: true,
   },
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  passphrase: {
+    type: String,
+    required: true,
+  },
 });
 
 const Message = mongoose.model('Message', messageSchema);

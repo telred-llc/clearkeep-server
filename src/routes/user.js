@@ -7,9 +7,9 @@ router.get('/', async (req, res) => {
   return res.send(users);
 });
 
-router.get('/:userId', async (req, res) => {
+router.get('/:passphrase', async (req, res) => {
   const user = await req.context.models.User.findById(
-    req.params.userId,
+    req.params.passphrase,
   );
   return res.send(user);
 });
