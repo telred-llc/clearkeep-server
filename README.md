@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Simple Node with Express + MongoDB Server
 
 [![Build Status](https://travis-ci.org/rwieruch/node-express-mongodb-server.svg?branch=master)](https://travis-ci.org/rwieruch/node-express-mongodb-server) [![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/) [![Greenkeeper badge](https://badges.greenkeeper.io/rwieruch/node-express-mongodb-server.svg)](https://greenkeeper.io/)
@@ -54,3 +55,6 @@ An easy way to get started with a Express server with MongoDB with Node.js. [Rea
 * Delete a message with:
   * URL: http://localhost:3000/messages/1
   * Method: DELETE
+=======
+# clearkeep-server
+>>>>>>> 5724636e89f0d8e5e67332e11c8dce36a632065f
