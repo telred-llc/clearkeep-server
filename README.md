@@ -1,4 +1,6 @@
-# clearkeep-server
+# ClearKeep Server
+
+Backend server for ClearKeep.
 
 ##How to run?
 
@@ -6,15 +8,15 @@ Clone project to your computer
 
 Run npm install
 
-Run node with Javascript file by path: "root/bin/www"
+Run node with Javascript file by path: "root/bin/www".
 
 ## Api list
 
-I will provide apis by postman export collections
+I will provide apis by postman export collections.
 
 ## Features
 
-Create and get passphrase using home server access token
+Create and get passphrase using home server access token.
 
 ## Dependencies
 
@@ -30,7 +32,13 @@ bluebird
 
 request
 
-request-promise
+request-promise.
+
+## Heroku demo
+
+Base url: https://ck-server-demo.herokuapp.com/
+
+End point for get passphrase: api/user/get-passphrase - add Bearer token to Headers.
 
 ##About
 
