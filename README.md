@@ -2,7 +2,7 @@
 
 Backend server for ClearKeep.
 
-##How to run?
+## How to run?
 
 Clone project to your computer
 
@@ -40,6 +40,6 @@ Base url: https://ck-server-demo.herokuapp.com/
 
 End point for get passphrase: api/user/get-passphrase - add Bearer token to Headers.
 
-##About
+## About
 
 Copyright by VMODEV JSC
