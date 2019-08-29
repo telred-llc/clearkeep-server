@@ -10,4 +10,8 @@ router.get('/get-passphrase', function (req, res) {
 router.post('/create-passphrase', function (req, res) {
     userController.create(req, res);
 });
+
+router.delete('/delete-passphrase', function (req, res) {
+    userController.delete(req, res);
+});
 module.exports = router;
