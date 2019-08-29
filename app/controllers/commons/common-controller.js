@@ -2,7 +2,7 @@ class CommonController {
     findSuccess(res) {
         return (result) => {
             res.status(200);
-            res.json(result);
+            res.json({'data': result});
         }
     }
 
