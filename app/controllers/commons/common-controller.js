@@ -3,7 +3,7 @@ class CommonController {
         return (result) => {
             res.status(200);
             res.json({
-                'error_code': 0,
+                'errorCode': 0,
                 'message': 'success',
                 'data': result
             });
@@ -28,7 +28,7 @@ class CommonController {
         return (result) => {
             res.status(200);
             res.json({
-                'error_code': 0,
+                'errorCode': 0,
                 'message': 'success',
                 'data': {'deleted': result}
             });
@@ -39,8 +39,8 @@ class CommonController {
         return (error) => {
             res.status(500);
             res.json({
-                'error_code': error.errorCode,
-                'message_code': error.message,
+                'errorCode': error.errorCode,
+                'message': error.message,
                 'data': {}
             });
         }
@@ -50,8 +50,8 @@ class CommonController {
         return (error) => {
             res.status(404);
             res.json({
-                'error_code': error.errorCode,
-                'message_code': error.message,
+                'errorCode': error.errorCode,
+                'message': error.message,
                 'data': {}
             });
         }
@@ -61,8 +61,8 @@ class CommonController {
         return (error) => {
             res.status(401);
             res.json({
-                'error_code': 401,
-                'message_code': 'Authentication error',
+                'errorCode': 401,
+                'message': 'Authentication error',
                 'data': {}
             });
         }
