@@ -20,6 +20,13 @@ class CommonController {
         }
     }
 
+    deleteSuccess(res) {
+        return (result) => {
+            res.status(200);
+            res.json({'deleted': result});
+        }
+    }
+
     serverError(res) {
         return (error) => {
             res.status(500);
