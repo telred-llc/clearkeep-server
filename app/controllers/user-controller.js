@@ -29,6 +29,14 @@ class UserController {
             }).catch(this.common.serverError(res));
         }).catch(this.common.authenticationError(res));
     }
+
+    delete(req, res) {
+        let token = req.headers.authorization;
+        this.clearKeepService.getAccountId(token).then((data) => {
+            this.userDao.delete(data.user_id).then(this.common.deleteSuccess(res))
+                .catch(this.common.serverError(res));
+        }).catch(this.common.authenticationError(res));
+    }
 }
 
 module.exports = UserController;

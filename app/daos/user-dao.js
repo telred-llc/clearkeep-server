@@ -9,7 +9,7 @@ class UserDao {
     findById(id) {
         let query = "SELECT * FROM User WHERE id=$id";
         let params = {$id: id};
-        return this.common.findOne(query, params)
+        return this.common.findOne(query, params);
     }
 
     create(User) {
@@ -20,6 +20,12 @@ class UserDao {
             $passphrase: User.passphrase
         };
         return this.common.insert(query, params);
+    }
+
+    delete(id) {
+        let query = "DELETE FROM User WHERE id=$id";
+        let params = {$id: id};
+        return this.common.run(query, params);
     }
 }
 
