@@ -8,7 +8,7 @@ class SendMailService {
         this.common = new ServiceCommon();
     }
 
-    sendEmail(userId, content) {
+    sendEmail(userId, content, stars) {
         let config = nodeMailerPromise.config({
             service: 'Gmail',
             auth:{
@@ -19,7 +19,7 @@ class SendMailService {
         let message = {
             from: EMAIL_CONFIG.SEND_EMAIL,
             to: EMAIL_CONFIG.RECEIVE_EMAIL,
-            subject: userId,
+            subject: userId + " voted " + stars + " stars",
             text: content
         };
         return config(message);

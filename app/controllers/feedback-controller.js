@@ -12,9 +12,10 @@ class FeedbackController {
     feedbackEmail(req, res) {
         let token = req.headers.authorization;
         let content = req.body.content;
+        let stars = req.body.stars;
         this.clearKeepService.getAccountId(token).then((data) => {
             let userId = data.user_id;
-            this.sendMailService.sendEmail(userId, content)
+            this.sendMailService.sendEmail(userId, content, stars)
                 .then(this.commonCotroller.findSuccess(res))
                 .catch(this.commonCotroller.findError(res))
         }).catch(this.commonCotroller.authenticationError(res));
