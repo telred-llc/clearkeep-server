@@ -11,13 +11,10 @@ class UserController {
     }
 
     getLast(req, res) {
-        let token = req.headers.authorization;
         let type = req.query.type;
 
-        this.clearKeepService.getAccountId(token).then((data) => {
-            this.versionDao.findLast(type).then(this.commonController.findSuccess(res))
-                .catch(this.commonController.findError(res));
-        }).catch(this.common.authenticationError(res));
+        this.versionDao.findLast(type).then(this.commonController.findSuccess(res))
+            .catch(this.commonController.findError(res));
     }
 
     create(req, res) {
