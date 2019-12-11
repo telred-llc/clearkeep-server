@@ -7,6 +7,10 @@ let init = function () {
         "id TEXT PRIMARY KEY," +
         " passphrase TEXT" +
         ")");
+    db.run("CREATE TABLE if not exists Version (" +
+        "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+        " type TEXT," + " version TEXT," + " createdAt INTEGER" +
+        ")");
 };
 
 module.exports = {
